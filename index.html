@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Shape Client Leads</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <div class="sidebar glass" id="sidebar">
+        <header>
+            <h1>Client Correlation</h1>
+            <p>Mapping <span>0</span> extracted client locations.</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-box">
+                <span class="stat-label">Identified</span>
+                <span class="stat-value" id="identifiedCount">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Pending</span>
+                <span class="stat-value" id="pendingCount">0</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search correlations...">
+        </div>
+
+        <div class="list-container" id="clientList">
+            <!-- Client Cards will be injected here -->
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
